@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { Input } from '@chakra-ui/react';
+import { Button, ButtonGroup, Stack } from '@chakra-ui/react';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Input placeholder="medium size" size="md" margin={2} />
+      <Stack direction="row" spacing={4} align="center" margin={2}>
+        <Button colorScheme="teal" variant="outline">
+          Generate Segitiga
+        </Button>
+        <Button colorScheme="teal" variant="outline">
+          Generate Bilangan Ganjil
+        </Button>
+        <Button colorScheme="teal" variant="outline">
+          Generate Bilangan Prima
+        </Button>
+      </Stack>
     </div>
   );
 }
